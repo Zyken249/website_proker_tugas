@@ -1,0 +1,552 @@
+/*
+
+TemplateMo 619 Axis Industrial
+
+https://templatemo.com/tm-619-axis-industrial
+
+*/
+
+/* ============================================================
+   INDEX PAGE — SPECIFIC STYLES
+   ============================================================ */
+
+.hero__grid--dense {
+    background-size: 60px 60px;
+    opacity: 0.04;
+    background-image:
+        linear-gradient(var(--ink) 1px, transparent 1px),
+        linear-gradient(90deg, var(--ink) 1px, transparent 1px);
+}
+
+
+/* ============================================================
+   INTRODUCTION / ABOUT SECTION
+   ============================================================ */
+
+.intro {
+    display: grid;
+    grid-template-columns: 380px 1fr;
+    gap: clamp(2rem, 5vw, 5rem);
+    align-items: start;
+    border: var(--border);
+    box-shadow: var(--shadow);
+    background: var(--base);
+    padding: clamp(2rem, 4vw, 4rem);
+}
+
+/* --- Photo Column --- */
+.intro__photo {
+    position: sticky;
+    top: calc(var(--header-h) + 2rem);
+}
+
+.intro__photo-frame {
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    border: var(--border);
+    background: var(--surface);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.intro__photo-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: relative;
+    z-index: 1;
+}
+
+.intro__photo-placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    color: var(--muted);
+}
+
+.intro__photo-placeholder svg {
+    opacity: 0.35;
+}
+
+.intro__photo-placeholder span {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    opacity: 0.5;
+}
+
+.intro__photo-label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: var(--fs-micro);
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    opacity: 0.4;
+}
+
+.intro__photo-dot {
+    width: 6px;
+    height: 6px;
+    background: var(--safety);
+    display: inline-block;
+}
+
+/* --- Content Column --- */
+.intro__greeting {
+    margin-bottom: 1.5rem;
+}
+
+.intro__name {
+    font-size: var(--fs-h2);
+    margin-bottom: 1.5rem;
+    line-height: 1;
+}
+
+.intro__bio {
+    font-size: var(--fs-data);
+    line-height: 2;
+    opacity: 0.65;
+    max-width: 560px;
+    margin-bottom: 2rem;
+}
+
+.intro__skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.intro__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+
+/* ============================================================
+   PROJECT — FEATURED (Full-width)
+   ============================================================ */
+
+.project--featured {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border: var(--border);
+    box-shadow: var(--shadow);
+    background: var(--base);
+    margin-bottom: var(--gap);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.project--featured:hover {
+    transform: translate(-4px, -4px);
+    box-shadow: 12px 12px 0px var(--ink);
+}
+
+.project__photo {
+    border-right: var(--border);
+    background: var(--surface);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 360px;
+    position: relative;
+    overflow: hidden;
+}
+
+.project__photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    inset: 0;
+}
+
+.project__photo-placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    color: var(--muted);
+}
+
+.project__photo-placeholder svg {
+    opacity: 0.3;
+}
+
+.project__photo-placeholder span {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    opacity: 0.5;
+}
+
+.project__content {
+    padding: clamp(2rem, 4vw, 3.5rem);
+    display: flex;
+    flex-direction: column;
+}
+
+.project__number {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+    font-size: clamp(4rem, 7vw, 6rem);
+    line-height: 0.8;
+    letter-spacing: -0.05em;
+    opacity: 0.08;
+    margin-bottom: 1.5rem;
+}
+
+.project__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.project__title {
+    font-size: var(--fs-h2);
+    margin-bottom: 1.5rem;
+    line-height: 1;
+}
+
+.project__desc {
+    font-size: var(--fs-data);
+    line-height: 2;
+    opacity: 0.6;
+    max-width: 480px;
+    margin-bottom: 2rem;
+    flex-grow: 1;
+}
+
+.project__meta {
+    display: flex;
+    gap: 2.5rem;
+    padding-top: 1.5rem;
+    border-top: var(--border-hair);
+}
+
+.project__meta-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: var(--fs-micro);
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: var(--safety);
+    margin-bottom: 0.4rem;
+}
+
+.project__meta-value {
+    font-size: var(--fs-data);
+    opacity: 0.7;
+}
+
+
+/* ============================================================
+   PROJECT CARDS — Grid (2-column)
+   ============================================================ */
+
+.project-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--gap);
+}
+
+.project-card {
+    border: var(--border);
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+    background: var(--base);
+    position: relative;
+    z-index: 1;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.project-card:hover {
+    transform: translate(-4px, -4px);
+    box-shadow: 12px 12px 0px var(--ink);
+}
+
+/* Dark variant */
+.project-card--dark {
+    background: var(--ink);
+    color: var(--base);
+    border-color: var(--ink);
+    box-shadow: var(--shadow-safety);
+}
+
+.project-card--dark:hover {
+    box-shadow: 12px 12px 0px var(--safety);
+}
+
+.project-card--dark .project-card__photo {
+    border-bottom: 4px solid rgba(255,255,255,0.15);
+    background: #111;
+    color: rgba(255,255,255,0.4);
+}
+
+.project-card--dark .project-card__number {
+    opacity: 0.12;
+}
+
+.project-card--dark .project-card__semester {
+    border-color: rgba(255,255,255,0.2);
+    color: rgba(255,255,255,0.5);
+}
+
+/* Card photo area */
+.project-card__photo {
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    background: var(--surface);
+    border-bottom: var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.project-card__photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    inset: 0;
+}
+
+/* Card content */
+.project-card__content {
+    padding: clamp(1.5rem, 3vw, 2.5rem);
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.project-card__number {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+    font-size: clamp(3rem, 5vw, 4.5rem);
+    line-height: 0.8;
+    letter-spacing: -0.05em;
+    opacity: 0.06;
+    margin-bottom: 1rem;
+}
+
+.project-card__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.project-card__title {
+    font-size: var(--fs-h3);
+    margin-bottom: 1rem;
+    line-height: 0.95;
+}
+
+.project-card__desc {
+    font-size: var(--fs-data);
+    line-height: 1.9;
+    opacity: 0.6;
+    flex-grow: 1;
+    margin-bottom: 1.5rem;
+}
+
+.project-card__footer {
+    padding-top: 1rem;
+    border-top: var(--border-hair);
+}
+
+.project-card__semester {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: var(--fs-micro);
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    padding: 0.3em 0.7em;
+    border: 1px solid rgba(0,0,0,0.15);
+    color: var(--muted);
+}
+
+
+/* ============================================================
+   BENTO GRID (kept for compatibility)
+   ============================================================ */
+
+.bento__grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-auto-rows: minmax(180px, auto);
+    gap: var(--gap);
+}
+
+.bento-card--wide    { grid-column: span 8; }
+.bento-card--mid     { grid-column: span 6; }
+.bento-card--narrow  { grid-column: span 4; }
+.bento-card--tall    { grid-row: span 2; }
+
+.bento-card__visual {
+    position: absolute;
+    right: -10px;
+    bottom: -10px;
+    width: 120px;
+    height: 120px;
+    border: 3px solid currentColor;
+    border-radius: 50%;
+    opacity: 0.08;
+}
+
+/* Sticky Stack Cards */
+.stack__header {
+    margin-bottom: clamp(3rem, 6vw, 6rem);
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.stack__subtitle {
+    font-size: var(--fs-data);
+    max-width: 340px;
+    opacity: 0.6;
+    line-height: 1.7;
+}
+
+.stack__card {
+    position: sticky;
+    top: 80px;
+    border: var(--border);
+    box-shadow: var(--shadow);
+    background: var(--base);
+    padding: clamp(2rem, 4vw, 4rem);
+    margin-bottom: 2rem;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: var(--gap);
+    align-items: center;
+    transition: none;
+}
+
+.stack__card:nth-child(2) { top: 110px; background: #F5F5F0; }
+.stack__card:nth-child(3) { top: 140px; background: var(--ink); color: var(--base); box-shadow: var(--shadow-safety); }
+.stack__card:nth-child(4) { top: 170px; background: #F0F0EB; }
+
+.stack__card:hover { transform: translate(-4px, -4px); box-shadow: 12px 12px 0px var(--ink); }
+.stack__card:nth-child(3):hover { box-shadow: 12px 12px 0px var(--safety); }
+
+.stack__card-left  { grid-column: span 4; }
+.stack__card-right { grid-column: span 8; }
+
+.stack__card-step {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+    font-size: clamp(4rem, 8vw, 7rem);
+    line-height: 0.8;
+    letter-spacing: -0.05em;
+    opacity: 0.12;
+}
+
+.stack__card-title { font-size: var(--fs-h2); margin-bottom: 1rem; }
+.stack__card-text { font-size: var(--fs-data); line-height: 1.8; opacity: 0.7; max-width: 520px; }
+.stack__card-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1.2rem; }
+
+.stack__card:nth-child(3) .tag { border-color: var(--base); color: var(--base); background: transparent; }
+.stack__card:nth-child(3) .tag--filled { background: var(--safety); border-color: var(--safety); }
+
+/* About / Template Info */
+.about {
+    padding: clamp(3rem, 6vw, 5rem) clamp(1rem, 4vw, 4rem);
+    border-bottom: var(--border);
+    background: var(--surface);
+}
+
+.about__inner { max-width: 760px; margin: 0 auto; text-align: center; }
+.about__text { font-size: var(--fs-data); line-height: 2; opacity: 0.6; margin-bottom: 1.5rem; }
+.about__links { display: flex; gap: 0.6rem; justify-content: center; flex-wrap: wrap; }
+
+
+/* ============================================================
+   RESPONSIVE — INDEX PAGE
+   ============================================================ */
+
+@media (max-width: 1024px) {
+    .intro {
+        grid-template-columns: 300px 1fr;
+    }
+
+    .project--featured {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .bento-card--wide,
+    .bento-card--mid,
+    .bento-card--narrow { grid-column: span 6; }
+
+    .stack__card-left  { grid-column: span 3; }
+    .stack__card-right { grid-column: span 9; }
+}
+
+@media (max-width: 768px) {
+    .intro {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .intro__photo {
+        position: relative;
+        top: auto;
+        max-width: 320px;
+        margin: 0 auto;
+    }
+
+    .intro__photo-label {
+        justify-content: center;
+    }
+
+    .intro__bio {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .intro__skills {
+        justify-content: center;
+    }
+
+    .intro__actions {
+        justify-content: center;
+    }
+
+    .project--featured {
+        grid-template-columns: 1fr;
+    }
+
+    .project__photo {
+        border-right: none;
+        border-bottom: var(--border);
+        min-height: 240px;
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .bento-card--wide,
+    .bento-card--mid,
+    .bento-card--narrow { grid-column: 1 / -1; }
+    .bento-card--tall { grid-row: span 1; }
+
+    .stack__card { grid-template-columns: 1fr; position: relative; top: auto !important; }
+    .stack__card-left, .stack__card-right { grid-column: 1 / -1; }
+    .stack__card-step { font-size: 4rem; }
+}
